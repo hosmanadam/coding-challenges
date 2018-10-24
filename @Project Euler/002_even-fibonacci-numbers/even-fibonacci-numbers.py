@@ -9,6 +9,8 @@ By considering the terms in the Fibonacci sequence whose values do not exceed
 four million, find the sum of the even-valued terms.
 """
 
+
+"""v1"""
 def get_fibonacci(max, start=[1, 1]):
   if sum(start[-2:]) > max:
     return start
@@ -20,5 +22,5 @@ evens = {num for num in sequence if num%2==0}
 print(sum(evens))
 
 
-# """Begoner's solution: every 3rd number is even"""
+"""Begoner's solution - every 3rd number is even"""
 # evens = get_fibonacci(4000000)[2::3]

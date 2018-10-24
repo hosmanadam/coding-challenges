@@ -2,8 +2,8 @@
 
 from math import sqrt
 
+"""v1 - Exact copy of my Udemy course version"""
 def next_prime():
-  """Exact copy of my Udemy course version"""
   candidate = 2
   while True:
     for divisor in range(2, round(sqrt(candidate))+1):

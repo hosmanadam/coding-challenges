@@ -1,4 +1,7 @@
-"""https://www.codewars.com/kata/molecule-to-atoms/train/python
+"""https://www.codewars.com/kata/molecule-to-atoms/train/python"""
+
+
+"""v1
 
 Whole process on 'K4[ON(SO3)2]2':
 0) Initial                                   →                         #         'K4[ON(SO3)2]2'
@@ -19,6 +22,7 @@ def parse_molecule(formula):
     formula = re.sub(innermost_braced, lambda x: x.group('atoms') * int(x.group('num')), formula)
   formula = re.findall(atom, formula)
   return {atom:formula.count(atom) for atom in formula}
+
 
 # TESTS
 print(parse_molecule('Ka2O')) # {'Ka': 2, 'O' : 1}

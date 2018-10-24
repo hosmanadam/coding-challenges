@@ -7,8 +7,8 @@ What is the smallest positive number that is evenly divisible by
 all of the numbers from 1 to 20?
 """
 
+"""v3 - Awesome recursive optimization"""
 def lowest_common_multiple(largest_divisor):
-  """v3 - awesome recursive optimization"""
   if largest_divisor == 1:
     return 1
   increment = lowest_common_multiple(largest_divisor-1)
@@ -21,7 +21,7 @@ def lowest_common_multiple(largest_divisor):
 print(lowest_common_multiple(20))
 
 
-# """v2 - I got 2520 from SarumanUncloaked who got it from the first half of assignment"""
+"""v2 - I got 2520 from SarumanUncloaked who got it from the first half of assignment"""
 # num = 2520
 # while True:
 #   print(num)
@@ -30,7 +30,7 @@ print(lowest_common_multiple(20))
 #   num += 2520
 
 
-# """v1 -  I realized to step by 20s"""
+"""v1 -  I realized to step by 20s"""
 # num = 20
 # while True:
 #   print(num)

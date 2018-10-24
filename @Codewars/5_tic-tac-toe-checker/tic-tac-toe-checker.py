@@ -1,5 +1,7 @@
 """https://www.codewars.com/kata/tic-tac-toe-checker/train/python"""
 
+
+"""v1"""
 def isSolved(board):
   shapes = {"ud":   {"step_y": 1, "step_x": 0},
             "lr":   {"step_y": 0, "step_x": 1},
@@ -18,9 +20,12 @@ def isSolved(board):
   return -1
 
 
+"""One of many CW solutions
+
+- doesn't wait to declare tie until all positions are full:
+  game is a tie if all possible rows have marks from both players
+"""
 # def isSolved(board):
-#   """One of many CW solutions:
-#   - game is a tie if all possible rows have marks from both players"""
 #   rows = board
 #   cols = zip(*board)
 #   dgls = [[board[i*j][i*j] for i in range(3)] for j in [1,-1]]

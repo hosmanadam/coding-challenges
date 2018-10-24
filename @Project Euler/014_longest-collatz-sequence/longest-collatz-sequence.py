@@ -15,10 +15,13 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
 """
 
+
 """v4 - Lighter LOOP version optimized at 6.427 seconds
+
 - whenever a sequence reaches a number lower than start, it adds length
-previously calculated for that number
-- suggestion to only look above 500000 actually doubled runtime, didn't do that"""
+  previously calculated for that number
+- suggestion to only look above 500000 actually doubled runtime, didn't do that
+"""
 def get_collatz_sequence_len(start):
   len = 1
   num = start
@@ -39,8 +42,10 @@ for n in range(1, 1000000):
 print(max(lengths.values()))
 
 
-# """v3 - Lighter LOOP version at 56.308 seconds
-# Doesn't create sequence, just counts its length"""
+"""v3 - Lighter LOOP version at 56.308 seconds
+
+- doesn't create sequence, just counts its length
+"""
 # def get_collatz_sequence_len(num):
 #   len = 1
 #   while num > 1:
@@ -50,7 +55,7 @@ print(max(lengths.values()))
 #       num = 3*num+1
 #     len += 1
 #   return len
-
+#
 # longest = {'start': 0, 'length': 0}
 # for n in range(1, 1000000):
 #   result = get_collatz_sequence_len(n)
@@ -59,7 +64,7 @@ print(max(lengths.values()))
 # print(longest)
 
 
-# """v2 - Complete RECURSIVE version at 186.556 seconds"""
+"""v2 - Complete RECURSIVE version at 186.556 seconds"""
 # def get_collatz_sequence(num):
 #   if num < 2:
 #     return [num]
@@ -68,7 +73,7 @@ print(max(lengths.values()))
 #   else:
 #     num = 3*num+1
 #   return [num] + get_collatz_sequence(num)
-
+#
 # longest = {'start': 0, 'length': 0}
 # for n in range(1, 1000000):
 #   result = len(get_collatz_sequence(n))
@@ -77,7 +82,7 @@ print(max(lengths.values()))
 # print(longest)
 
 
-# """v1 - Complete LOOP version at 106.227 seconds"""
+"""v1 - Complete LOOP version at 106.227 seconds"""
 # def get_collatz_sequence(num):
 #   sequence = [num]
 #   while num > 1:
@@ -87,7 +92,7 @@ print(max(lengths.values()))
 #       num = 3*num+1
 #     sequence.append(num)
 #   return sequence
-
+#
 # longest = {'start': 0, 'length': 0}
 # for n in range(1, 1000000):
 #   result = len(get_collatz_sequence(n))

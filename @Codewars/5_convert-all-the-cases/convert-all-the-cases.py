@@ -1,4 +1,5 @@
 """https://www.codewars.com/kata/convert-all-the-cases/train/python
+
 RegEx:
 - lookbehind: unnecessary due to non-overlapping nature of RegEx:
               (if previous match has ended, that's the starting point)

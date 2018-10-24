@@ -2,6 +2,7 @@
 
 import re
 
+"""v1"""
 def increment_string(strng):
   word = re.search(r'(?<=^)(.*\D)(?=\d*$)', strng)
   seq = re.search(r'(\d+)(?=$)', strng)
@@ -10,8 +11,8 @@ def increment_string(strng):
   if word: return word.group() + '1'
   return '1'
 
+"""Top CW solution - doesn't use RegEx if it doesn't have to"""
 # def increment_string(strng):
-#   """Top CW solution, doesn't use RegEx if it doesn't have to"""
 #   head = strng.rstrip('0123456789')
 #   tail = strng[len(head):]
 #   if tail == "": return strng+"1"

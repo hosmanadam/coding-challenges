@@ -49,7 +49,7 @@ print(greatest_product_so_far)
 
 
 # def prod(string):
-#   """Before I knew about `reduce()`"""
+#   """Used this before I knew about `reduce()`"""
 #   result = int(string[0])
 #   for char in string[1:]:
 #     result = result*int(char)

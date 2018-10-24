@@ -20,17 +20,16 @@ def decodeMorse(morse_code):
 
 """PART 2: https://www.codewars.com/kata/decode-the-morse-code-advanced/train/python"""
 
+"""v2 - With RegEx"""
 import re
-
 def find_sampling_rate(bits):
-  """v2 - With RegEx"""
   for i in range(1, len(bits)+1):
     for bit in '01':
       if re.search(f"[^{bit}][{bit}]{{{i}}}[^{bit}]", bits):
         return i
 
+"""v1 - Plain old logic"""
 # def find_sampling_rate(bits):
-#   """v1 - Plain old logic"""
 #   shortest = len(bits)
 #   current = ''
 #   for i in range(len(bits)):
@@ -42,8 +41,8 @@ def find_sampling_rate(bits):
 #       current = bits[i]
 #   return shortest
 
+"""Top CW solution - shorter, but more readable"""
 # def find_sampling_rate(bits):
-#   """Not mine, but nice... Short but more readable."""
 #   return min(len(m) for m in re.findall(r'1+|0+', bits))
 
 def decodeBits(bits):

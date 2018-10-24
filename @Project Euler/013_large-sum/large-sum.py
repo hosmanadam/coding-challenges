@@ -106,11 +106,16 @@ nums_string = """\
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690"""
 
-"""Brute force, works beautifully"""
-nums = [int(num) for num in nums_string.split("\n")]
-print(str(sum(nums))[:10])
 
-# """Elegant, only summing first 11 numbers of each.
-# Anything after the 12th number won't affect the first 10 of result"""
+"""v2 - Elegant
+
+- only sums first 11 numbers of each
+- anything after the 12th number won't affect the first 10 of result
+"""
 # nums = [int(num[:11]) for num in nums_string.split("\n")]
 # print(str(sum(nums))[:10])
+
+
+"""v1 - Brute force, works beautifully"""
+nums = [int(num) for num in nums_string.split("\n")]
+print(str(sum(nums))[:10])

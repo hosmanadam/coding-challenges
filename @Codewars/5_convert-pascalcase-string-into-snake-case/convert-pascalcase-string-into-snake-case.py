@@ -1,11 +1,11 @@
 """https://www.codewars.com/kata/convert-pascalcase-string-into-snake-case/train/python"""
 
+"""v2 - Just for practice"""
 # def to_underscore(string):
-#   """v2 - Just for practice"""
 #   return ''.join([f'_{x.lower()}' if x.isupper() else x for x in str(string)]).strip('_')
 
+"""v1"""
 def to_underscore(string):
-  """v1"""
   string = str(string)
   for char in string:
     if char.isupper():

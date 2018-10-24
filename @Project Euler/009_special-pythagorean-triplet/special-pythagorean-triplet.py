@@ -32,7 +32,7 @@ while not result:
   a, b = a+1, a+1
 print(result)
 
-# """v2 - Finds solution and breaks out, but while loop would be more fitting"""
+"""v2 - Finds solution and breaks out, but while loop would be more fitting"""
 # a = 2
 # result = None
 # while not result:
@@ -48,7 +48,7 @@ print(result)
 #   a += 1
 # print(result)
 
-# """v1 - Finds solution but doesn't break out"""
+"""v1 - Finds solution but doesn't break out"""
 # for a in range(2, 1000):
 #   for b in range(a+1, 1000):
 #     c = sqrt(a**2 + b**2)

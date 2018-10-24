@@ -1,8 +1,8 @@
 """https://www.codewars.com/kata/spelling-bee/train/python"""
 
 
+"""v2 - Using cool short rotate logic"""
 def how_many_bees(hive):
-  """v2 - Using cool short rotate logic"""
   bee_count = 0
   if hive:
     hive_rotated = list(zip(*hive[::-1]))
@@ -13,8 +13,8 @@ def how_many_bees(hive):
   return bee_count
 
 
+"""v1 - Long rotating logic + workaround to get rows as strings"""
 # def how_many_bees(hive):
-#   """v1 - Long rotating logic + workaround to get rows as strings"""
 #   hive = [''.join(row) for row in hive]
 #   hive_rotated = []
 #   for x in range(len(hive[0])):
@@ -32,10 +32,11 @@ def how_many_bees(hive):
 #   return bee_count
 
 
+"""Top CW solution - turns search string around rather than search area"""
 # def count(it):
 #   return sum(''.join(x).count('bee') + ''.join(x).count('eeb') for x in it)
+#
 # def how_many_bees(hive):
-#   """Top CW solution, turns search string around rather than search area"""
 #   return count(hive) + count(zip(*hive)) if hive else 0
 
 

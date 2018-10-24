@@ -1,6 +1,6 @@
 """https://www.codewars.com/kata/regex-password-validation/train/python"""
 
-# """v3 - Broken up yet another way"""
+"""v3 - Broken up yet another way"""
 # from re import compile, VERBOSE
 # regex = compile('''
 #                 ^
@@ -11,7 +11,7 @@
 #                 $
 #                 ''', VERBOSE)
 
-# """v2 - Broken into components"""
+"""v2 - Broken into components"""
 # regex = (r'^'
 #          r'(?=.*[a-z])'
 #          r'(?=.*[A-Z])'

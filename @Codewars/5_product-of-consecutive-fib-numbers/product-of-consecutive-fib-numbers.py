@@ -2,9 +2,9 @@
 
 from math import sqrt
 
+"""v2 - Needless complication"""
 # from operator import mul
 # def productFib(prod):
-#   """v2 - Needless complication"""
 #   fib = make_fib(prod)
 #   for i in range(len(fib)-1):
 #     lst = fib[i:i+2]
@@ -13,8 +13,8 @@ from math import sqrt
 #     if mul(*lst) > prod:
 #       return lst + [False]
 
+"""v1"""
 def productFib(prod):
-  """v1"""
   fib = make_fib(prod)
   for i in range(len(fib)-1):
     if fib[i] * fib[i+1] == prod:
@@ -30,8 +30,9 @@ def make_fib(limit, start=[0, 1]):
   start.append(new)
   return make_fib(limit, start)
 
+
+"""Top CW solution - only does what's needed"""
 # def productFib(prod):
-#   """Best CW solution, only does what's needed"""
 #   a, b = 0, 1
 #   while prod > a * b:
 #     a, b = b, a + b

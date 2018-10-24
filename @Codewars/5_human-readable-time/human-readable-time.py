@@ -6,8 +6,8 @@ def make_readable(seconds):
   SS = seconds%60
   return ':'.join(str(x).zfill(2) for x in (HH, MM, SS))
 
+"""Top CW solution - calculates inside .format() method"""
 # def make_readable(s):
-#   """Top CW solution, calculates inside .format() method"""
 #   return '{:02}:{:02}:{:02}'.format(s / 3600, s / 60 % 60, s % 60)
 
 
