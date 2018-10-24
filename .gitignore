@@ -103,5 +103,10 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+# ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ CUSTOM ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
+
 # Visual Studio Code
 .vscode
+
+# TODO / unsolved
+→*
