@@ -59,7 +59,7 @@ def path_finder(maze):
 #   return False
 
 
-# TESTS
+# # TESTS
 #
 # a = "\n".join([".W.",
 #                ".W.",
