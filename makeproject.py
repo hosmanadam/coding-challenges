@@ -3,7 +3,7 @@
 - example:
   $ python3 makeproject.py
   Num:  33
-  Name: 33 Kickass Fibonacci Sequence #5!
+  Name: Kickass Fibonacci Sequence #5!
 - creates:
   './→33_kickass-fibonacci-sequence-5/kickass-fibonacci-sequence-5.py'
 """
@@ -12,12 +12,10 @@
 # - extract challenge type (Codewars / Project Euler / other)
 # - scrape number & title from page
 
-
 import os
-from sys import argv
 
 def make_project(num, name):
-  os.chdir(os.sys.path[0])  # set CWD
+  os.chdir(os.sys.path[0])  # set CWD (avoid creating the files somewhere else)
   name = name.strip().lower().replace(' ', '-')
   for char in set(name):
     if char not in 'abcdefghijklmnopqrstuvwxyz0123456789-':
@@ -29,6 +27,11 @@ def make_project(num, name):
   with open(filename, 'w') as file:
     file.write('\"\"\"URL\"\"\"\n\ndef func():\n  pass\n\n# TESTS\n')
 
-num = input('Num:  ')
-name = input('Name: ')
-make_project(num, name)
+
+def main():
+  num = input('Num:  ')
+  name = input('Name: ')
+  make_project(num, name)
+
+if __name__ == '__main__':
+  main()
