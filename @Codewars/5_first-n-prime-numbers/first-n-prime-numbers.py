@@ -1,7 +1,7 @@
 """https://www.codewars.com/kata/first-n-prime-numbers"""
 
 
-"""v2 - Takes memoization to next level via class attributes (6x faster in CC random tests)"""
+"""v3 - A bit more optimized (sqrt calculation is done once per candidate)"""
 
 from math import sqrt
 
@@ -13,14 +13,37 @@ class Primes:
   @classmethod
   def first(cls, count):
     while len(cls.confirmed) < count:
+      candidate_sqrt = sqrt(cls.candidate)
       for divisor in cls.confirmed:
-        if divisor > sqrt(cls.candidate):
+        if divisor > candidate_sqrt:
           cls.confirmed.append(cls.candidate)
           break
         if cls.candidate%divisor == 0:
           break
       cls.candidate += 2
     return cls.confirmed[:count]
+
+
+"""v2 - Takes memoization to next level via class attributes (6x faster in CC random tests)"""
+#
+# from math import sqrt
+#
+# class Primes:
+#
+#   confirmed = [2]
+#   candidate = 3
+#
+#   @classmethod
+#   def first(cls, count):
+#     while len(cls.confirmed) < count:
+#       for divisor in cls.confirmed:
+#         if divisor > sqrt(cls.candidate):
+#           cls.confirmed.append(cls.candidate)
+#           break
+#         if cls.candidate%divisor == 0:
+#           break
+#       cls.candidate += 2
+#     return cls.confirmed[:count]
 
 
 """v1 - Copied from adam.py, stripped unneeded features, turned into class method"""
@@ -31,17 +54,17 @@ class Primes:
 #
 #   @classmethod
 #   def first(cls, count):
-#     cls.confirmed = [2]
+#     confirmed = [2]
 #     candidate = 3
-#     while len(cls.confirmed) < count:
-#       for divisor in cls.confirmed:
+#     while len(confirmed) < count:
+#       for divisor in confirmed:
 #         if divisor > sqrt(candidate):
-#           cls.confirmed.append(candidate)
+#           confirmed.append(candidate)
 #           break
 #         if candidate%divisor == 0:
 #           break
 #       candidate += 2
-#     return cls.confirmed
+#     return confirmed
 
 
 # TESTS
