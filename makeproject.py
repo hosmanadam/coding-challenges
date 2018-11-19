@@ -16,54 +16,38 @@ Example:
 # TODO: automate translation of Codewars tests into Python unit tests
 # TEST_DICTIONARY = {'test': 'self',
 #                    'assert_equals': 'assertEqual'}
-# TODO: use RegEx for char swapping
-# TODO: collapse multiple whitespaces into one
 
 
 import os
+import re
 
-
-UNITTEST_TEMPLATE = '''import unittest
-
-import main
-
-
-class SampleTests(unittest.TestCase):
-
-  def test1(self):
-    pass # TODO: write unit tests
-
-
-if __name__ == '__main__':
-  unittest.main(verbosity=2)
-'''
-
-
-FUNCTION_TEMPLATE = '''def foo():
-  pass # TODO: implement
-'''
+from templates import UNITTEST_TEMPLATE, FUNCTION_TEMPLATE
 
 
 def make_project(num, name, url):
-  os.chdir(os.sys.path[0])  # set CWD (avoid creating the files somewhere else)
-  name = name.strip().lower().replace(' ', '-')
-  for char in set(name):
-    if char not in 'abcdefghijklmnopqrstuvwxyz0123456789-':
-      name = name.replace(char, '')
-  dirname = f"→{num}_{name}"
-  os.makedirs(dirname)
-  os.chdir(dirname)
-  with open('main.py', 'w') as file:
-    file.write(f'"""{url}"""\n\n' + FUNCTION_TEMPLATE)
-  with open('tests.py', 'w') as file:
-    file.write(UNITTEST_TEMPLATE)
+    os.chdir(os.sys.path[0])  # set CWD (avoid creating the files somewhere else)
+    name = kebabize(name)
+    dirname = f"→{num}_{name}"
+    os.makedirs(dirname)
+    os.chdir(dirname)
+    with open('main.py', 'w') as file:
+        file.write(f'"""{url}"""\n\n' + FUNCTION_TEMPLATE)
+    with open('tests.py', 'w') as file:
+        file.write(UNITTEST_TEMPLATE)
+
+
+def kebabize(name):
+    name = name.strip().lower()
+    name = re.sub(r'\s+', '-', name)
+    return re.sub(r'[^a-z\d-]+', '', name)
 
 
 def main():
-  num = input('Num:  ')
-  name = input('Name: ')
-  url = input('URL:  ')
-  make_project(num, name, url)
+    num = input('Num:  ')
+    name = input('Name: ')
+    url = input('URL:  ')
+    make_project(num, name, url)
+
 
 if __name__ == '__main__':
-  main()
+    main()
