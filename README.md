@@ -4,6 +4,13 @@ I'm not sure why you're here, but I hope you'll find something interesting.\
 The following parts of this readme will detail some standards/conventions I use to keep things organized around here.
 
 ***
+### Ongoing changes
+- Convert print tests to unit tests
+- Change file naming from challenge name to `main.py` and `tests.py` for cleaner modularity
+- Treat each challenge folder as a self-contained project
+- Change indentation from 2 spaces to 4 spaces
+- Update `makeproject.py` with new naming convention & unit testing template
+***
 
 ### Profiles
 - Codewars: https://www.codewars.com/users/adamhosman
@@ -44,5 +51,3 @@ The following parts of this readme will detail some standards/conventions I use 
       (they're not meant to be docstrings: they may refer to multiple functions below them)
     - are not commented out via `#`, even if their respective solution is\
       (this makes them stand out and visibly segments the file into parts)
-### TODO
-- Convert print tests to unit tests
