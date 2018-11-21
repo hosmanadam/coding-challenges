@@ -37,8 +37,8 @@ def make_project(num, name, url):
 
 
 def kebabize(name):
-    name = name.strip().lower()
     name = re.sub(r'\s+', '-', name)
+    name = name.strip('-').lower()
     return re.sub(r'[^a-z\d-]+', '', name)
 
 
