@@ -9,7 +9,7 @@ The following parts of this readme will detail some standards/conventions I use 
 - Change file naming from challenge name to `main.py` and `tests.py` for cleaner modularity
 - Treat each challenge folder as a self-contained project
 - Change indentation from 2 spaces to 4 spaces
-- Update `makeproject.py` with new naming convention & unit testing template
+- Rephrase standards to be applicable to multiple languages
 ***
 
 ### Profiles
