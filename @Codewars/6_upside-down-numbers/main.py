@@ -6,10 +6,10 @@ OPPOSITES = {'0': '0', '1': '1', '6': '9', '8': '8', '9': '6'}
 
 
 """v2 - Pointless three-liner"""
-def solve(a, b):
-    return sum(((all(n in OPPOSITES for n in str(n)) and
-                 all(OPPOSITES[str(n)[i]] == str(n)[-i-1] for i in range(math.ceil(len(str(n))/2)))))
-               for n in range(a, b))
+# def solve(a, b):
+#     return sum(((all(n in OPPOSITES for n in str(n)) and
+#                  all(OPPOSITES[str(n)[i]] == str(n)[-i-1] for i in range(math.ceil(len(str(n))/2)))))
+#                for n in range(a, b))
 
 
 """v1"""
