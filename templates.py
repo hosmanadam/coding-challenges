@@ -19,3 +19,7 @@ FUNCTION_TEMPLATE = '''\
 def foo():
     pass # TODO: implement
 '''
+
+REPLACEMENTS = [
+    ('test.assert_equals(', 'self.assertEqual(main.')
+]
