@@ -30,7 +30,7 @@ The following parts of this readme will detail some standards/conventions I use 
 - Files are put in identically named folders
     - Project Euler: folder name is prefixed with *problem number*, followed by underscore
     - Codewars: folder name is prefixed with *kyu grading of kata*, followed by underscore
-- `makeproject.py` is used to automate most of this
+- My script [accept-challenge](https://github.com/hosmanadam/accept-challenge) is used to automate most of this
 
 ### Commits
 - Solutions are committed one by one
