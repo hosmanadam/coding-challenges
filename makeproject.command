@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Script to automate folder & file creation for challenges
+
+"""
+Script to automate folder & file creation for challenges
 
 Example:
   - $ python3 makeproject.py
@@ -11,14 +13,6 @@ Example:
 """
 
 
-# TODO: take URL as sole input and scrape for other data (challenge type, number, title, code, tests)
-# TODO: open folder in Finder / file in IDE
-# TODO: place project in proper challenge folder
-# TODO: automate translation of Codewars tests into Python unit tests
-# TEST_DICTIONARY = {'test': 'self',
-#                    'assert_equals': 'assertEqual'}
-
-
 import os
 import re
 
@@ -26,7 +20,7 @@ from templates import UNITTEST_TEMPLATE, FUNCTION_TEMPLATE
 
 
 def make_project(num, name, url):
-    os.chdir(os.sys.path[0])  # set CWD (avoid creating the files somewhere else)
+    os.chdir(os.sys.path[0])                 # Set CWD (make sure we're here)
     name = kebabize(name)
     dirname = f"→{num}_{name}"
     os.makedirs(dirname)
@@ -38,9 +32,10 @@ def make_project(num, name, url):
 
 
 def kebabize(name):
-    name = re.sub(r'\s+', '-', name)
-    name = name.strip('-').lower()
-    return re.sub(r'[^a-z\d-]+', '', name)
+    name = name.strip().lower()
+    name = re.sub(r'[^a-z\d\s]+', '', name)  # Remove non-alpha characters
+    name = re.sub(r'\s+', '-', name)         # Change whitespaces to dashes
+    return name
 
 
 def main():
