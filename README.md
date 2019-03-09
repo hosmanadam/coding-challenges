@@ -1,6 +1,6 @@
 ## Hello there,
 This is the repo where I collect all of my work on various coding challenges.\
-In addition to code, tougher problems may include notes about my thinking process, and incremental improvements of my solution.\
+In addition to code, tougher problems may include notes about my thinking process, and incremental improvements of my solution.
 I'm having a lot of fun doing these, and hope you'll find something interesting too.\
 See my profiles: 
 [@Codewars](https://www.codewars.com/users/adamhosman), 
@@ -20,7 +20,7 @@ See my profiles:
 ### Project names
 > NOTE: My script [accept-challenge](https://github.com/hosmanadam/accept-challenge) is used to automate most of this (limited to Python at this time)
 - Project folders are named after challenge title: kebab-case version, with non-alpha characters removed
-- Files are put in identically named folders
-    - Codewars: folder name is prefixed with *kyu grading of kata*, followed by underscore
-    - HackerRank: folder name is prefixed with *max score*, followed by underscore
-    - Project Euler: folder name is prefixed with *problem number*, followed by underscore
+- Names are prefixed with...
+    - Codewars: *kyu grading of kata* + underscore
+    - HackerRank: *max score* + underscore
+    - Project Euler: *problem number* + underscore
