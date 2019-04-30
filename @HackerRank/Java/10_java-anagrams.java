@@ -7,10 +7,7 @@ public class Solution {
     static boolean isAnagram(String a, String b) {
         if (a.length() != b.length())
             return false;
-
-        java.util.HashMap<Character, Integer> aMap = counter(a.toLowerCase());
-        java.util.HashMap<Character, Integer> bMap = counter(b.toLowerCase());
-        return aMap.equals(bMap);
+        return counter(a.toLowerCase()).equals(counter(b.toLowerCase()));
     }
 
     public static java.util.HashMap<Character, Integer> counter(String string) {
