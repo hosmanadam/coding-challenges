@@ -1,8 +1,5 @@
 /* https://www.hackerrank.com/challenges/simple-array-sum/problem */
 
-import java.io.*;
-import java.util.*;
-
 public class Solution {
 
    static int simpleArraySum(int[] ar) {
