@@ -8,7 +8,7 @@ SHAPES = [
 ]
 
 
-def is_solved(board):
+def get_winning_color(board):
     for shape in SHAPES:
         col_step, row_step = shape['col_step'], shape['row_step']
         for row_start_index in range(*shape['row_start_index_range']):
@@ -19,10 +19,6 @@ def is_solved(board):
                     return color
 
 
-def letter_to_column_index(letter):
-    return 'ABCDEFG'.index(letter.upper())
-
-
 def next_available_row_index(board, column_index):
     for row_index in range(5, -1, -1):
         if not board[row_index][column_index]:
@@ -31,7 +27,7 @@ def next_available_row_index(board, column_index):
 
 def make_move(move, board):
     letter, color = move.split('_')
-    column_index = letter_to_column_index(letter)
+    column_index = 'ABCDEFG'.index(letter.upper())
     row_index = next_available_row_index(board, column_index)
     board[row_index][column_index] = color
     return board
@@ -41,7 +37,7 @@ def who_is_winner(moves):
     board = [[None] * 7 for i in range(6)]
     for move in moves:
         board = make_move(move, board)
-        winning_color = is_solved(board)
+        winning_color = get_winning_color(board)
         if winning_color:
             return winning_color
     return 'Draw'
