@@ -30,7 +30,7 @@ public class Solution {
             int b;
             for (int i = 1; i <= n; i++) {
                 found = false;
-                // Determine two numbers `x` that could possibly satisfy `|x - i| = k`
+                // Determine two numbers `x` that satisfy `|x - i| = k`
                 a = i + k;
                 b = i + k * -1;
                 // Use smallest that's in range and hasn't been used yet
@@ -107,7 +107,7 @@ public class Solution {
  * 1. The larger `k` is, the more recursive calls it takes to eliminate all options
  * 2. Every time a smallest absolute permutation is found, it happens in exactly `n + 1` recursive calls
  *    - THIS IS THE KEY
- *    - for any given `i`, we only need to consider the smaller `x` that satisfies `|x - i| = k`
+ *    - for any given `i`, we only need to consider the smaller `x` that satisfies all conditions
  *    - if that `x` doesn't work, we won't have any results -> no need to branch out
  */
 //public class Solution {
