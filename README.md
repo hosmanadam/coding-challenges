@@ -5,7 +5,16 @@ I'm having a lot of fun doing these, and hope you'll find something interesting 
 See my profiles: 
 [@Codewars](https://www.codewars.com/users/adamhosman), 
 [@HackerRank](https://www.hackerrank.com/adamhosman), 
-[@Project Euler](https://projecteuler.net/progress=adamhosman).
+[@Project Euler](https://projecteuler.net/progress=adamhosman).  
+
+### Some of my favorites
+- [The Bomberman Game (Java)](https://github.com/hosmanadam/coding-challenges/blob/master/%40HackerRank/Problem%20Solving/40_the-bomberman-game/Solution.java)
+- [Absolute Permutation (Java)](https://github.com/hosmanadam/coding-challenges/blob/master/%40HackerRank/Problem%20Solving/40_absolute-permutation/Solution.java)
+- [Queen's Attack II (Java)](https://github.com/hosmanadam/coding-challenges/blob/master/%40HackerRank/Problem%20Solving/30_queens-attack-2/Solution.java)
+- [Connect Four (Python)](https://github.com/hosmanadam/coding-challenges/tree/master/%40Codewars/4_connect-four)
+- [Path Finder (Python)](https://github.com/hosmanadam/coding-challenges/tree/master/%40Codewars/4_path-finder-1-can-you-reach-the-exit)
+- [Molecule to Atoms (Python)](https://github.com/hosmanadam/coding-challenges/blob/master/%40Codewars/5_molecule-to-atoms/molecule-to-atoms.py)
+- [Largest Product in a Grid (Java)](https://github.com/hosmanadam/coding-challenges/blob/master/%40Project%20Euler/011_largest-product-in-a-grid/largest-product-in-a-grid.py)
 
 ### Structure
 - Each challenge lives in a a self-contained project folder
