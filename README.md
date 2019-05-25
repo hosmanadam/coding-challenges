@@ -14,7 +14,7 @@ See my profiles:
 - [Connect Four (Python)](https://github.com/hosmanadam/coding-challenges/tree/master/%40Codewars/4_connect-four)
 - [Path Finder (Python)](https://github.com/hosmanadam/coding-challenges/tree/master/%40Codewars/4_path-finder-1-can-you-reach-the-exit)
 - [Molecule to Atoms (Python)](https://github.com/hosmanadam/coding-challenges/blob/master/%40Codewars/5_molecule-to-atoms/molecule-to-atoms.py)
-- [Largest Product in a Grid (Java)](https://github.com/hosmanadam/coding-challenges/blob/master/%40Project%20Euler/011_largest-product-in-a-grid/largest-product-in-a-grid.py)
+- [Largest Product in a Grid (Python)](https://github.com/hosmanadam/coding-challenges/blob/master/%40Project%20Euler/011_largest-product-in-a-grid/largest-product-in-a-grid.py)
 
 ### Structure
 - Each challenge lives in a a self-contained project folder
