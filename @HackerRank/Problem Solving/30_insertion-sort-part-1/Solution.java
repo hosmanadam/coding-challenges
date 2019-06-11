@@ -4,19 +4,32 @@ import java.util.*;
 
 public class Solution {
 
+    /** v2 - Cleaned up logic */
     static void insertionSort1(int n, int[] arr) {
-        int val = arr[arr.length - 1];
-        for (int i = arr.length - 2; i > -2 ; i--) {
-            if (i == -1 || arr[i] < val) {
-                arr[i+1] = val;
-                print(arr);
-                return;
-            } else {
-                arr[i + 1] = arr[i];
-                print(arr);
-            }
+        int val = arr[n-1];
+        int i = n-1;
+        while (--i >= 0 && arr[i] > val) {
+            arr[i + 1] = arr[i];
+            print(arr);
         }
+        arr[i+1] = val;
+        print(arr);
     }
+
+    /** v1 */
+//    static void insertionSort1(int n, int[] arr) {
+//        int val = arr[arr.length - 1];
+//        for (int i = arr.length - 2; i > -2 ; i--) {
+//            if (i == -1 || arr[i] < val) {
+//                arr[i+1] = val;
+//                print(arr);
+//                return;
+//            } else {
+//                arr[i + 1] = arr[i];
+//                print(arr);
+//            }
+//        }
+//    }
 
     private static void print(int[] arr) {
         for (int num : arr)
