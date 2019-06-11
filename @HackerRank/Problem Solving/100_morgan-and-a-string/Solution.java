@@ -38,10 +38,10 @@ public class Solution {
                 lookaheadB++;
             }
 
-            // We have a difference or looked ahead to the end of one or both
+            // We have a difference or looked ahead to the end of one or both.
             // In case of one lookahead reaching the end and the other not,
-            // consume from the latter, as it leads to having an extra option
-            // when the shorter eventually gets depleted
+            // consume from the latter, as it will lead to having an extra
+            // option when the shorter gets 1 step away from depletion.
             boolean endOfA = lookaheadA == lenA;
             boolean endOfB = lookaheadB == lenB;
             if (endOfB && !endOfA || !endOfB && !endOfA && a.charAt(lookaheadA) < b.charAt(lookaheadB)) {
