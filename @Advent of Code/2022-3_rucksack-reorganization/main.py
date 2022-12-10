@@ -1,6 +1,5 @@
 """https://adventofcode.com/2022/day/3"""
 
-
 INPUT_FILENAME = 'puzzle_input.txt'
 # INPUT_FILENAME = 'puzzle_input_sample.txt'
 

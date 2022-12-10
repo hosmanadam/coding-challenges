@@ -2,7 +2,6 @@
 
 import doctest
 
-
 INPUT_FILENAME = 'puzzle_input.txt'
 # INPUT_FILENAME = 'puzzle_input_sample.txt'
 
